@@ -15,7 +15,7 @@ class ModelApiConfig(AppConfig):
         print("Loading intent_model..."),
 
         import pickle
-        config_path = '/Users/alexey/any_tc_bot/acur_intent_config.json'
+        config_path = './../any_tc_bot/acur_intent_config.json'
         my_config = json.load(open(config_path))
         tmp_config = copy.deepcopy(my_config)
         tmp_config['chainer']['out'] = ['y_pred_labels', 'y_pred_probas']
