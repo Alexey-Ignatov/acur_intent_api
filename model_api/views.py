@@ -18,6 +18,6 @@ class IntentModelApi(APIView):
     def get(request):
 
         res_dict = predict(str(request.data['context']).lower(),intent_model,in_2_label)
-
+        print(res_dict)
         #return Response({"intent_type":pd.Series(res_dict).sort_values().index[-1]})
         return Response({"predict_dict": res_dict})
