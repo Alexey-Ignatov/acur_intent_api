@@ -8,7 +8,7 @@ import pandas as pd
 
 
 def predict(name,model,in_2_label):
-    th1 = .8
+    th1 = .9
     th2 = .15
     res_l, probs = model([name.lower()])
     res_dict = {}
